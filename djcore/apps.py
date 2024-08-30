@@ -1,6 +1,6 @@
 from django.apps import AppConfig
 
 
-class DjuserConfig(AppConfig):
+class DjcoreConfig(AppConfig):
     default_auto_field = 'django.db.models.BigAutoField'
-    name = 'djuser'
+    name = 'djcore'
