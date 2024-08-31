@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% block title %} Edit Profile {% endblock %}
+{% block content %}
+    <style>
+        body {
+            background-color: #080710;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: #ffffff;
+        }
+
+        .content-container {
+            max-width: 30%;
+            margin: 5% auto;
+            padding: 20px;
+        }
+    </style>
+
+
+    <div class="container content-container">
+        <h1 style="margin-top: 5%"> Update your Profile. </h1>
+
+        <form method="POST">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button class="btn btn-info"><a href="{% url 'djuser:password' user.id %}" style="color: white">Reset Password</a></button>
+            <button class="btn btn-secondary">Update Profile</button>
+        </form>
+    </div>
+{% endblock %}
