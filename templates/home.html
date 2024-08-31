@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% block title %} Welcome {% endblock %}
+{% block content %}
+    <style>
+        body {
+            background-color: #080710;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        p {
+            font-size: 25px;
+            font-family: "Times New Roman", Times, serif;
+            color: #ffffff;
+            text-align: center;
+            margin-top: 200px;
+            margin-left: 200px;
+            margin-right: 200px;
+        }
+        input[type=submit] {
+            background-color: #238d0c;
+            border: none;
+            border-radius: 50px;
+            color: white;
+            padding: 16px 32px;
+            text-decoration: none;
+            margin-left: 45%;
+            cursor: pointer;
+            font-size: 20px;
+            font-family: "Times New Roman", Times, serif;
+        }
+    </style>
+    <div class="container my-5">
+    <p>This platform is for those person who want to make a online form for collecting information, opinion, quiz, and so on.</p>
+
+        <form action="#">
+            <input type="submit" value="Get Started!">
+        </form>
+    </div>
+{% endblock %}
