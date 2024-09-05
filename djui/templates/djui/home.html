@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% block title %} Edit Profile {% endblock %}
+{% block content %}
+    <style>
+        body {
+            background-color: #080710;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: #ffffff;
+        }
+
+        .content-container {
+            max-width: 30%;
+            margin: 5% auto;
+            padding: 20px;
+        }
+    </style>
+
+<form method="POST" id="djui">
+    {% csrf_token %}
+    <div id="fields-container">
+        <!-- Container for dynamically added fields -->
+    </div>
+    <button type="button" id="add-field-btn">Add Field</button>
+    <input type="submit" value="Save Form">
+</form>
+
+<select id="field-type-select">
+    <option value="CharField">Text</option>
+    <option value="EmailField">Email</option>
+    <option value="IntegerField">Number</option>
+    <option value="FileField">File</option>
+    <!-- Add more field types as needed -->
+</select>
+
+<script>
+    document.getElementById('add-field-btn').addEventListener('click', function() {
+        var selectedField = document.getElementById('field-type-select').value;
+        // Add new input fields based on the selectedField type to #fields-container
+    });
+</script>
+{% endblock %}

@@ -55,7 +55,7 @@ class EditProfilePageView(UpdateView):
     model = User
     form_class = EditProfileForm
     template_name = 'djuser/edit_profile.html'
-    success_url = reverse_lazy('posts:home')
+    success_url = reverse_lazy('djuser:home')
 
     def get_object(self, **kwargs):
         return self.request.user
